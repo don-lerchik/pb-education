@@ -1,0 +1,15 @@
+mixin contentBlock-address(modifier)
+  -var content = modifier || {}
+  -var title = content.title || ''
+  -var place = content.place || ''
+  -var phone = content.phone || ''
+  -var time = content.time || ''
+  .contentBlock-address&attributes(attributes)
+    .contentBlock-address__title= title
+    .contentBlock-address__row.contentBlock-address__row--address адрес:
+      span.contentBlock-address__bold= place
+    .contentBlock-address__row.contentBlock-address__row--phone телефон:
+      span.contentBlock-address__bold= phone
+    .contentBlock-address__row.contentBlock-address__row--time Время работы:
+      span.contentBlock-address__bold= time
+    

@@ -1,0 +1,141 @@
+.feedback {
+  &__container {
+    padding-top: 30px;
+    padding-bottom: 41px;
+    background-color: $color-2;
+  }
+  &__wrapper {
+    padding: 16px 33px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    margin-bottom: 70px;
+  }
+  &__address {
+    color: $color-3;
+    order: 1;
+    min-width: 220px;
+  }
+  &__form {
+    margin-bottom: 22px;
+    width: 100%;
+  }
+  &__img {
+    width: 590px;
+    height: 340px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &--left{
+      margin-right: 105px;
+    }
+  }
+  &__fill{
+    background-color: $color-2;
+  }
+  &__containerFill{
+    padding: 0 40px;
+  }
+  &__wrapperFill{
+    display: flex;
+    align-items: center;
+  }
+}
+@media(min-width: $tablet-width) {
+  .feedback {
+    &__container {
+      padding-top: 40px;
+      padding-bottom: 0;
+      margin-bottom: 210px;
+      display: flex;
+      justify-content: center;
+    }
+    &__wrapper {
+      padding: 40px 10px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__title {
+      margin-bottom: 70px;
+    }
+    &__address {
+      color: $color-3;
+      min-width: 220px;
+      order: 0;
+    }
+    &__form {
+      margin-left: 34px;
+      width: 370px;
+    }
+    &__img {
+      width: 590px;
+      height: 340px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      &--left{
+        margin-right: 105px;
+      }
+    }
+    &__fill{
+      background-color: $color-2;
+    }
+    &__containerFill{
+      padding: 0 40px;
+    }
+    &__wrapperFill{
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+@media(min-width: $laptop-width) {
+  .feedback {
+    &__container {
+      padding-top: 100px;
+      padding-bottom: 190px;
+      margin-bottom: 0;
+      display: flex;
+      justify-content: center;
+      background-color: $color-5;
+    }
+    &__wrapper {
+      margin: 0 auto;
+      background-color: $color-2;
+      padding: 40px 33px;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__title {
+      margin-bottom: 70px;
+    }
+    &__address {
+      color: $color-3;
+      min-width: 220px;
+    }
+    &__form {
+      margin-left: 86px;
+    }
+    &__img {
+      width: 590px;
+      height: 340px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      &--left{
+        margin-right: 105px;
+      }
+    }
+    &__fill{
+      background-color: $color-2;
+    }
+    &__containerFill{
+      padding: 0 40px;
+    }
+    &__wrapperFill{
+      display: flex;
+      align-items: center;
+    }
+  }
+}

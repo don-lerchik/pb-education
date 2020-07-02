@@ -1,0 +1,9 @@
+mixin history(modifier)
+  -var content = modifier || {}
+  -var title = content.title || ''
+  -var text = content.text || ''
+  section.history&attributes(attributes)
+    .container.history__container
+      h2.title.history__title= title
+      p.history__text= text
+    .history__cubes

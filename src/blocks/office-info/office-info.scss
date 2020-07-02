@@ -1,0 +1,76 @@
+.office-info {
+  &__title{
+      margin-bottom: 30px;
+      & span{
+          padding: 0 6px;
+      }
+  }
+  &__infoBlock{
+      border: 2px solid $color-2;
+      border-bottom: none;
+      padding: 40px;
+      margin: 0 38px;
+  }
+  &__subtitle{
+      margin: 0;
+      margin-bottom: 30px;
+      color: $color-2;
+  }
+  &__list{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  }
+  &__item{
+    &--options{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+  }
+  &__metroItem{
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      &:last-of-type{
+          margin-bottom: 0;
+      }
+  }
+  &__subwayName,
+  &__time{
+    padding: 0 6px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  &__subwayIcon{
+      &.orange{
+          fill: #EE7C13;
+      }
+      &.red{
+          fill: #F32F24;
+      }
+  }
+  &__options{
+      margin-right: 63px;
+  }
+  &__sliderElem {
+    width: 568px;
+    height: 326px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &__sliderBlock{
+      margin-top: -16px;
+  }
+  &__sliderElem {
+    transition: all 0.3s ease-in-out;
+    transform: scale(0.9);
+    & + .slick-center {
+      transition: all 0.3s ease-in-out;
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  }
+}

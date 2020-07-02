@@ -1,0 +1,219 @@
+extends ../templates/template.pug
+block head
+  +head('АРЕНДА ПОМЕЩЕНИЙ ДЛЯ ОБРАЗОВАНИЯ')
+block content
+  - 
+    var contentHeader= {
+      contentPage: [
+         {
+          text: 'Главная',
+          href: '/index.html',
+        },
+        {
+          text: 'Информация',
+          href: '/info.html',
+        },
+        {
+          text: 'Помещения',
+          href: '/premises.html',
+          active: true,
+        },
+        {
+          text: 'Акции',
+          href: '/discounts.html',
+        },
+        {
+          text: 'Контакты',
+          href: './contacts.html',
+        }
+      ],
+    };
+    var breadcrumbsContent = [
+      {
+        text :'Главная',
+        href: 'index.html',
+      },
+      {
+        text: 'Помещения',
+        href: '#',
+      },
+    ];
+    var contentOffice= {
+      name: '018543',
+      general: {
+        title: 'Общее',
+        elem: [
+          {
+            name: 'Тип объекта',
+            count: 'Офис',
+          },
+          {
+            name: 'Площадь',
+            count: '20 962,9 м²',
+          },
+          {
+            name: 'Код',
+            count: 'Урал',
+          },
+        ],
+      },
+      extra: {
+        title: 'Дополнительно',
+        elem: [
+          {
+            name: 'Паркинг',
+            icon: 'parking',
+          },
+          {
+            name: 'Доступ на объект',
+            icon: 'access',
+          },
+          {
+            name: 'Круглосуточная охрана',
+            icon: 'security',
+          },
+          {
+            name: 'Кафе',
+            icon: 'cafe',
+          },
+        ],
+      },
+      location: {
+        address: {
+          title: 'Расположение',
+          elem : [
+              {
+                name: 'Город',
+                count: 'Санкт Петербург',
+              },
+              {
+                name: 'Адрес',
+                count: 'ул. Комсомола д. 1-3',
+              },
+              {
+                name: 'Район',
+                count: 'Калининский',
+              },
+            ],
+        },
+        metro: [
+          {
+            name: 'Площадь Александра Невского II',
+            color: 'orange',
+            type: '1',
+            time: '10 мин.',
+          },
+          {
+            name: 'Чернышевская',
+            color: 'red',
+            type: '2',
+            time: '15 мин.',
+          }
+        ],
+      },
+      lists: [
+        {
+          title: 'Включено в аренду',
+          elem: [
+              'НДС',
+              'Коммунальные услуги',
+            ]
+        },
+         {
+          title: 'Доступные услуги',
+          elem: [
+              'Юридический адрес',
+              'Ремонт',
+              'Интернет, телефония',
+            ]
+        },
+      ],
+      imgList: [
+        './img/office_1.jpg',
+        './img/office_2.jpg',
+        './img/office_3.jpg',
+      ]
+    };
+    var contentAvailable= {
+      title: 'ИЗБРАННОЕ',
+      elem: [
+        {
+          id: '018543',
+          square: '19',
+          floor: '2',
+          class: 'B',
+          price: '22 560',
+          img: './img/office.jpg',
+        },
+        {
+          id: '018543',
+          square: '19',
+          floor: '2',
+          class: 'B',
+          price: '22 560',
+          img: './img/office.jpg',
+        },
+        {
+          id: '018543',
+          square: '19',
+          floor: '2',
+          class: 'B',
+          price: '22 560',
+          img: './img/office.jpg',
+        },
+        {
+          id: '018543',
+          square: '19',
+          floor: '2',
+          class: 'B',
+          price: '22 560',
+          img: './img/office.jpg',
+        },
+        {
+          id: '018543',
+          square: '19',
+          floor: '2',
+          class: 'B',
+          price: '22 560',
+          img: './img/office.jpg',
+        },
+        {
+          id: '018543',
+          square: '19',
+          floor: '2',
+          class: 'B',
+          price: '22 560',
+          img: './img/office.jpg',
+        },
+        {
+          id: '018543',
+          square: '19',
+          floor: '2',
+          class: 'B',
+          price: '22 560',
+          img: './img/office.jpg',
+        },
+      ]
+    };
+    var contentFeedback = {
+      img: {
+         imgLeft: './img/feedback-left.jpg',
+      },
+      title: 'СВЯЗАТЬСЯ С НАШЕЙ КОМПАНИЕЙ',
+    };
+    var contentMap = {
+       address:{
+        title: 'Офис продаж',
+        place: 'Санкт-Петербург',
+        phone: '999-88-88',
+        time: 'с 9 до 18',
+      },
+    }
+
+  +header(contentHeader)
+  +breadcrumbs(breadcrumbsContent)
+  +office-info(contentOffice)
+  +available-objects(contentAvailable)
+  +feedback(contentFeedback)
+  +map(contentMap)
+  +footer

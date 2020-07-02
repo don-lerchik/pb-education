@@ -1,0 +1,53 @@
+.icon {
+  &__phone {
+    width: 18px;
+    height: 18px;
+    fill: $color-5;
+  }
+  &__newspaper,
+  &__presentation,
+  &__internet,
+  &__globe {
+    width: 61px;
+    height: 64px;
+    fill: $color-2;
+  }
+  &__prev,
+  &__next {
+    width: 12px;
+    height: 8px;
+    fill: $text-color;
+  }
+  &__down {
+    width: 8px;
+    height: 12px;
+    fill: $text-color;
+  }
+  &__star {
+    width: 32px;
+    height: 32px;
+    fill: #DADADA;
+  }
+  &__access,
+  &__cafe,
+  &__parking,
+  &__security{
+    width: 24px;
+    height: 24px;
+    fill: $text-color;
+  }
+  &__metro{
+    width: 16px;
+    height: 16px;
+  }
+  &__drive-time{
+    width: 14px;
+    height: 13px;
+    fill: $text-color;
+  }
+  &__footsteps{
+    width: 16px;
+    height: 16px;
+    fill: $text-color;
+  }
+}

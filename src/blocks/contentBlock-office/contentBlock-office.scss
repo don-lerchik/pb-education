@@ -1,0 +1,124 @@
+
+.contentBlock-office {
+  padding: 16px;
+  background-color: $color-5;
+  box-shadow: $box-shadow;
+  position: relative;
+  &__wrap {
+    display: flex;
+    align-items: flex-start;
+  }
+  &__image {
+    width: 154px;
+    height: 226.82px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  &__content {
+    flex-grow: 1;
+  }
+  &__body {
+    padding: 0 8px;
+  }
+  &__title {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 31px;
+    color: $color-3;
+    & span {
+      padding: 0 4px;
+    }
+  }
+  &__data {
+    margin-bottom: 22px;
+  }
+  &__dataItem {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: normal;
+    margin-bottom: 25px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    & span {
+      padding: 0 4px;
+    }
+    &--class {
+      display: flex;
+      align-items: center;
+      & span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44.83px;
+        height: 44.83px;
+        border-radius: 50%;
+        border: 2px solid $color-3;
+        font-size: 30px;
+        line-height: 20px;
+        color: $color-1;
+        padding: 0;
+        margin-left: 12px;
+      }
+    }
+  }
+  &__footer {
+    padding: 0 8px;
+  }
+  &__price {
+    color: $color-3;
+    display: flex;
+    align-items: flex-end;
+    white-space: nowrap;
+    & span {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px;
+      color: $color-1;
+      margin-left: 11px;
+    }
+  }
+  &__description {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 288px;
+    margin-top: 18px;
+  }
+  &__favorites {
+    position: absolute;
+    top: 21px;
+    right: 21px;
+    &.active {
+      .contentBlock-office__icon-favorites{
+        fill: $color-1;
+      }
+    }
+  }
+}
+@media(min-width: $tablet-width) {
+  .contentBlock-office {
+    padding: 16px;
+    &__body {
+      padding: 0 18px;
+    }
+    &__footer {
+      padding: 0 18px;
+    }
+    &__image {
+      width: 211px;
+      height: 230px;
+    }
+    &__title {
+      font-size: 24px;
+    }
+    &__price {
+      & span {
+        font-weight: bold;
+        font-size: 24px;
+        margin-left: 31px;
+      }
+    }
+  }
+}

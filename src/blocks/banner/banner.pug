@@ -1,0 +1,39 @@
+mixin banner(modifier)
+  -var content = modifier || {}
+  -var img = content.img || ''
+  -var title = content.title || ''
+  -var price = content.price || ''
+  -var promo = content.promo || ''
+  -var advantage = content.advantage || ''
+  section.banner&attributes(attributes)
+    .banner__image(style='background-image: url("'+img + ' ") ')
+      .container.banner__container(class= promo ? 'banner__container--promo' : '')
+        .banner__blockTitle
+          h2.banner__title= title
+          .banner__price СТОИМОСТЬ ОТ
+            span.banner__priceVal= price
+          a.btn.btn__primary.banner__btn.banner__btn--long(href="#") Получить предложение
+          - if (promo) {
+            .banner__blockPromo.banner__blockPromo--desk
+              .banner__promoText= promo.text
+              .banner__promoCode промокод:
+                span= promo.code
+          -}
+        - if (advantage) {
+          .banner__blockAdvantage.banner__blockAdvantage--desk
+            .banner__advantageTitle= advantage.title
+            .banner__advantageText= advantage.text
+            a.btn.primary.banner__btn.banner__btn--short(href="#") Подробнее
+        -}
+    - if (promo) {
+      .banner__blockPromo.banner__blockPromo--mob
+        .banner__promoText= promo.text
+        .banner__promoCode промокод:
+          span= promo.code
+    -}
+    - if (advantage) {
+      .banner__blockAdvantage.banner__blockAdvantage--mob
+        .banner__advantageTitle= advantage.title
+        .banner__advantageText= advantage.text
+        a.btn.primary.banner__btn.banner__btn--short(href="#") Подробнее
+    -}

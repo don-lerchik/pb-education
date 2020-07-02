@@ -1,0 +1,20 @@
+mixin checkbox(options)
+	-var options = options || {}
+	-var name = options.name || ''
+	-var id = options.id || ''
+	-var title = options.title || ''
+	-var check = options.check || ''
+	.checkbox&attributes(attributes)
+		input.checkbox__input(type="checkbox" name= name id= id  checked= check)
+		label.checkbox__label(for= id)= title
+			block
+mixin checkbox2(options)
+	-var options = options || {}
+	-var name = options.name || ''
+	-var id = options.id || ''
+	-var title = options.title || ''
+	.checkbox2&attributes(attributes)
+		input.checkbox2__input(type="checkbox" name= name id= id)
+		label.checkbox2__label(for= id)= title
+			block
+

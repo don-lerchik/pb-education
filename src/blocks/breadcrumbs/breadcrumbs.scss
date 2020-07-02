@@ -1,0 +1,16 @@
+.breadcrumbs {
+  &__container {
+    padding: 0 15px;
+    padding-top: 39px;
+    padding-bottom: 39px;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  &__link{
+    padding:0 4px;
+    &:last-of-type ~ span{
+      display: none;
+    }
+  }
+}

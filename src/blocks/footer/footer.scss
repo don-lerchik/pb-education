@@ -1,0 +1,10 @@
+.footer {
+  &__container{
+    background-color: $color-1;
+  }
+  &__nav{
+    margin-right: 98px;
+    background-color: $color-3;
+    min-height: 48px;
+  }
+}

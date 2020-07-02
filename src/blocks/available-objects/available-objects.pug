@@ -1,0 +1,13 @@
+mixin available-objects(modifier)
+  -var content = modifier || {}
+  -var elems = content.elem || ''
+  -var title = content.title || ''
+  section.available-objects&attributes(attributes)
+    .container.available-objects__container
+      h2.title.available-objects__title= title
+    .available-objects__sliderBlock
+      each val in elems
+        +contentBlock-office(val)(class='available-objects__sliderItems')
+    .available-objects__buttonBlock
+      a.btn.secondary.available-objects__btn.available-objects__btn--callback(href="#") ЗАКАЗАТЬ ЗВОНОК
+      a.btn.secondary-2.available-objects__btn.available-objects__btn--more(href="#") СМОТРЕТЬ ЕЩЕ

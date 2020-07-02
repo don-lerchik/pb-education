@@ -1,0 +1,6 @@
+mixin map(modifier)
+  -var content = modifier || {}
+  -var address = content.address || ''
+  section.map&attributes(attributes)
+    .map__wrapper(style='background-image: url("./img/map.jpg")')
+    +contentBlock-address(address)(class="map__address")

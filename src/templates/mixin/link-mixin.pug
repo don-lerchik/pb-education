@@ -1,0 +1,21 @@
+//- link
+mixin link(options)
+	-var options = options || {}
+	-var href = options.href || '#'
+	-var text = options.text || ''
+	-var blank = options.blank ? '_blank' : false
+	-var visible = options.visible === 'false' ? 'visually-hidden': ''
+	a(href= href target= blank)&attributes(attributes)
+		block 
+		span(class= visible)= text
+//- link item
+mixin item-link(options)
+	-var options = options || {}
+	-var href = options.href || '#'
+	-var text = options.text || ''
+	-var visible = options.visible === 'false' ? 'visually-hidden': ''
+	-var active = options.active ? 'active':''
+		li&attributes(attributes)
+			a(href= href )(class= active)
+				span(class= visible)= text
+				block

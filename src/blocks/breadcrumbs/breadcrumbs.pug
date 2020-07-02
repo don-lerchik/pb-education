@@ -1,0 +1,7 @@
+mixin breadcrumbs(modifier)
+  -var content = modifier || {}
+  .breadcrumbs&attributes(attributes)
+    .container.breadcrumbs__container
+      each val in content
+        +link(val)(class = 'breadcrumbs__link')
+        span >

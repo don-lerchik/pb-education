@@ -1,0 +1,11 @@
+mixin pbt-table(modifier)
+  -var content = modifier || {}
+  -var title = content.title || ''
+  -var items = content.elem || ''
+  .pbt-table&attributes(attributes)
+    h3.pbt-table__tableTitle= title
+    table.pbt-table__table
+      each val in items
+        tr.pbt-table__row
+          td.pbt-table__cell.pbt-table__cell--left= val.name
+          td.pbt-table__cell.pbt-table__cell--right= val.count

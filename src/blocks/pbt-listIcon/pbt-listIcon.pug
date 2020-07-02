@@ -1,0 +1,11 @@
+mixin pbt-listIcon(modifier)
+  -var content = modifier || {}
+  -var title = content.title || ''
+  -var items = content.elem || ''
+  .pbt-listIcon&attributes(attributes)
+    h3.pbt-listIcon__title= title
+    ul.pbt-listIcon__list
+      each val in items
+        li.pbt-listIcon__listItem
+          +icon(val.icon,'pbt-listIcon__icon')
+          span.pbt-listIcon__text= val.name

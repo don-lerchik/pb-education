@@ -1,0 +1,14 @@
+mixin premises(modifier)
+  -var content = modifier || {}
+  -var title = content.title || ''
+  -var elems = content.elem || ''
+  section.premises&attributes(attributes)
+    .container.premises__container
+      h2.title.premises__title= title
+      .premises__head
+        +pagination(class='premises__pagination')
+      .premises__list
+        each val in elems
+          +contentBlock-office(val)(class='premises__item')
+      .premises__footer
+        +pagination(class='premises__pagination')

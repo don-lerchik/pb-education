@@ -1,0 +1,271 @@
+.banner {
+  &__image {
+    width: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  &__container {
+    position: relative;
+    padding: 0;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  &__blockTitle {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 26px 45px 45px;
+    width: 100%;
+    position: relative;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    position: relative;
+    color: $color-3;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -24px;
+      width: 8px;
+      background-color: $color-1;
+    }
+  }
+  &__price {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 78px;
+    text-transform: uppercase;
+  }
+  &__priceVal {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 78px;
+    margin-left: 9px;
+    color: $color-3;
+  }
+  &__btn {
+    color: $color-5;
+    background-color: $color-3;
+    &--long{
+      width: 278px;
+      margin: 0 auto;
+    }
+    &--short {
+      width: 146px;
+      margin: 0 auto;
+    }
+  }
+  &__blockPromo{
+    background-color: $color-1;
+    color: $color-2;
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 32px;
+      right: 32px;
+      bottom: 32px;
+      width: 5px;
+      background-color: #f6f8fb;
+    }
+    &--desk{
+      display: none;
+    }
+    &--mob{
+
+    }
+  }
+  &__promoText {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  &__promoCode {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: normal;
+  }
+  &__blockAdvantage {
+    position: relative;
+    background-color: $color-1;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 24px;
+      bottom: 75px;
+      left: 24px;
+      width: 5px;
+      background-color: #f6f8fb;
+    }
+    &--desk{
+      display: none;
+    }
+    &--mob{
+      padding: 24px 45px;
+    }
+  }
+  &__advantageTitle {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 32px;
+    margin-bottom: 8px;
+    color: $color-2;
+  }
+  &__advantageText {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 26px;
+  }
+}
+@media(min-width: $tablet-width) {
+  .banner{
+    &__container{
+      padding: 61px 32px 44px;
+    }
+    &__blockTitle{
+      margin: 0 auto;
+      width: 598px;
+      padding: 30px 60px;
+    }
+    &__title{
+      font-weight: bold;
+      font-size: 40px;
+      line-height: 50px;
+    }
+    &__price{
+      font-size: 24px;
+      line-height: 78px;
+      margin-bottom: 13px;
+    }
+    &__priceVal{
+      font-size: 36px;
+      line-height: 78px;
+    }
+    &__blockPromo{
+      &--desk{
+        display: block;
+      }
+      &--mob{
+        display: none;
+      }
+    }
+    &__blockAdvantage{
+      position: relative;
+      margin: 0 auto;
+      margin-top: 38px;
+      width: 598px;
+      padding: 23px 178px 15px 64px;
+      &::before {
+        top: 9px;
+        bottom: 15px;
+        left: 34px;
+        width: 5px;
+      }
+      &--desk{
+        display: block;
+      }
+      &--mob{
+        display: none;
+      }
+    }
+    &__advantageTitle {
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 32px;
+    }
+    &__advantageText {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    &__btn {
+      &--long{
+      }
+      &--short {
+        position: absolute;
+        bottom: 16px;
+        right: 26px;
+      }
+    }
+  }
+}
+@media(min-width: $laptop-width) {
+  .banner {
+    &__container {
+      padding-top: 69px;
+      padding-bottom: 32px;
+      &--promo {
+        padding-bottom: 180px;
+      }
+    }
+    &__blockTitle {
+      margin: 0;
+      padding: 23px 72px 30px;
+      width: 600px;
+    }
+    &__title {
+      font-weight: bold;
+      font-size: 40px;
+      line-height: 50px;
+      position: relative;
+      &::before {
+        top: 0;
+        bottom: 0;
+        left: -25px;
+        width: 8px;
+      }
+    }
+    &__price {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 78px;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+    }
+    &__priceVal {
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 78px;
+      margin-left: 9px;
+    }
+    &__blockPromo {
+      position: absolute;
+      bottom: -100px;
+      right: -174px;
+      width: 290px;
+      padding: 31px 35px 40px;
+      &::after {
+        top: 32px;
+        right: 32px;
+        bottom: 32px;
+        width: 5px;
+      }
+    }
+    &__promoText {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 24px;
+    }
+    &__promoCode {
+      font-weight: bold;
+      font-size: 29px;
+      line-height: normal;
+    }
+    &__blockAdvantage {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}
+@media(min-width: $desktop-width) {
+  .banner {
+    
+  }
+}

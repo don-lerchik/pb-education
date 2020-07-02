@@ -1,0 +1,14 @@
+mixin aboutUs(modifier)
+  -var content = modifier || {}
+  -var imgList = content.imgList || ''
+  -var title = content.title || ''
+  -var text = content.text || ''
+  section.aboutUs&attributes(attributes)
+    .container.aboutUs__container
+      .aboutUs__textBlock
+        h2.title.aboutUs__title= title
+        p.aboutUs__text= text
+    .aboutUs__sliderBlock
+      each val in imgList
+        .aboutUs__sliderElem(style='background-image: url("'+val + ' ") ')
+      

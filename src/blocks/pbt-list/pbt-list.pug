@@ -1,0 +1,9 @@
+mixin pbt-list(modifier)
+  -var content = modifier || {}
+  -var title = content.title || ''
+  -var items = content.elem || ''
+  .pbt-list&attributes(attributes)
+    h3.pbt-list__listTitle= title
+    ul.pbt-list__list
+      each val in items
+        li.pbt-list__listItem= val

@@ -1,0 +1,11 @@
+mixin contentBlock-feedbackForm(modifier)
+  .contentBlock-feedbackForm&attributes(attributes)
+    form(action="#" type="get").contentBlock-feedbackForm__form
+      input.contentBlock-feedbackForm__input.contentBlock-feedbackForm__input--name(id='name' name= 'name' type= 'text' placeholder="Ваше имя" autocomplete="on" required)
+      input.contentBlock-feedbackForm__input.contentBlock-feedbackForm__input--phone(id='phone' name= 'phone' type= 'tel' placeholder="Телефон" autocomplete="on" required)
+      +checkbox({ name: 'processing', id : 'checkbox_processing', title : ' Я даю согласие на обработку своих персональных данных ', check: true})(class = 'contentBlock-feedbackForm__checkbox' checked)
+        span.contentBlock-feedbackForm__span в соответствии с
+          br
+          +link({ text: 'Пользовательским соглашением' , href: '#'})(class = 'contentBlock-feedbackForm__link')
+      
+      button.btn.contentBlock-feedbackForm__btn(type = 'submit') Отправить

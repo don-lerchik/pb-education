@@ -1,0 +1,39 @@
+.choice {
+  &__container {
+    padding: 0 40px;
+    padding-bottom: 120px;
+  }
+  &__title {
+    margin-bottom: 70px;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: 360px;
+    height: 360px;
+    &--text {
+      padding: 15px 30px;
+    }
+    &--img{
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  &__number {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 32px;
+    color: $color-1;
+    margin-bottom: 26px;
+    display: flex;
+    align-items: baseline;
+  }
+  &__line{
+    width: 100%;
+    border-bottom: 1px solid $color-3;
+    margin-left: 10px;
+  }
+}

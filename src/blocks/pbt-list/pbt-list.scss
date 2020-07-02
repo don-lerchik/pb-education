@@ -1,0 +1,22 @@
+.pbt-list {
+  &__listTitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 14px;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__listItem {
+    padding: 6px 10px;
+    font-size: 14px;
+    line-height: 20px;
+    border-radius: 20px;
+    border: 1px solid $disable-color;
+    margin-right: 16px;
+    margin-bottom: 13px;
+  }
+}

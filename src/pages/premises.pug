@@ -1,0 +1,136 @@
+extends ../templates/template.pug
+block head
+  +head('АРЕНДА ПОМЕЩЕНИЙ ДЛЯ ОБРАЗОВАНИЯ')
+block content
+  - 
+    var contentHeader= {
+      contentPage: [
+         {
+          text: 'Главная',
+          href: '/index.html',
+        },
+        {
+          text: 'Информация',
+          href: '/info.html',
+        },
+        {
+          text: 'Помещения',
+          href: '/premises.html',
+          active: true,
+        },
+        {
+          text: 'Акции',
+          href: '/discounts.html',
+        },
+        {
+          text: 'Контакты',
+          href: './contacts.html',
+        }
+      ],
+    };
+    var breadcrumbsContent = [
+      {
+        text :'Главная',
+        href: 'index.html',
+      },
+      {
+        text: 'Помещения',
+        href: '#',
+      },
+    ];
+    var contentPremises = {
+      title: 'БОЛЬШОЙ ВЫБОР ПОМЕЩЕНИЙ',
+      elem: [
+        {
+          id: '018543',
+          square: '19',
+          floor: '2',
+          class: 'B',
+          price: '22 560',
+          img: './img/office.jpg',
+          favorites: '1',
+          description: 'Собственник предлагает в аренду ОФИСНЫЙ БЛОК без комиссий.ПЛОЩАДЬ БЛОКА: 264.7 кв. м,  2-й этаж БЦ.',
+        },
+        {
+          id: '018543',
+          square: '19',
+          floor: '2',
+          class: 'B',
+          price: '22 560',
+          img: './img/office.jpg',
+          favorites: '0',
+          description: 'Собственник предлагает в аренду ОФИСНЫЙ БЛОК без комиссий.ПЛОЩАДЬ БЛОКА: 264.7 кв. м,  2-й этаж БЦ.',
+        },
+        {
+          id: '018543',
+          square: '19',
+          floor: '2',
+          class: 'B',
+          price: '22 560',
+          img: './img/office.jpg',
+          favorites: '1',
+          description: 'Собственник предлагает в аренду ОФИСНЫЙ БЛОК без комиссий.ПЛОЩАДЬ БЛОКА: 264.7 кв. м,  2-й этаж БЦ.',
+        },
+        {
+          id: '018543',
+          square: '19',
+          floor: '2',
+          class: 'B',
+          price: '22 560',
+          img: './img/office.jpg',
+          favorites: '0',
+          description: 'Собственник предлагает в аренду ОФИСНЫЙ БЛОК без комиссий.ПЛОЩАДЬ БЛОКА: 264.7 кв. м,  2-й этаж БЦ.',
+        },
+        {
+          id: '018543',
+          square: '19',
+          floor: '2',
+          class: 'B',
+          price: '22 560',
+          img: './img/office.jpg',
+          favorites: '1',
+          description: 'Собственник предлагает в аренду ОФИСНЫЙ БЛОК без комиссий.ПЛОЩАДЬ БЛОКА: 264.7 кв. м,  2-й этаж БЦ.',
+        },
+        {
+          id: '018543',
+          square: '19',
+          floor: '2',
+          class: 'B',
+          price: '22 560',
+          img: './img/office.jpg',
+          favorites: '0',
+          description: 'Собственник предлагает в аренду ОФИСНЫЙ БЛОК без комиссий.ПЛОЩАДЬ БЛОКА: 264.7 кв. м,  2-й этаж БЦ.',
+        },
+        {
+          id: '018543',
+          square: '19',
+          floor: '2',
+          class: 'B',
+          price: '22 560',
+          img: './img/office.jpg',
+          favorites: '1',
+          description: 'Собственник предлагает в аренду ОФИСНЫЙ БЛОК без комиссий.ПЛОЩАДЬ БЛОКА: 264.7 кв. м,  2-й этаж БЦ.',
+        },
+      ]
+    };
+    var contentFeedback = {
+      img: {
+         imgLeft: './img/feedback-left.jpg',
+      },
+      title: 'СВЯЗАТЬСЯ С НАШЕЙ КОМПАНИЕЙ',
+    };
+    var contentMap = {
+       address:{
+        title: 'Офис продаж',
+        place: 'Санкт-Петербург',
+        phone: '999-88-88',
+        time: 'с 9 до 18',
+      },
+    }
+
+  +header(contentHeader)
+  +breadcrumbs(breadcrumbsContent)
+  +premises(contentPremises)
+  +feedback(contentFeedback)
+  +map(contentMap)
+  +footer

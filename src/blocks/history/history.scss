@@ -1,0 +1,30 @@
+.history {
+  position: relative;
+  &__container {
+    padding: 100px 40px 100px;
+  }
+  &__title {
+    margin-bottom: 70px;
+  }
+  &__text {
+    padding-right: 220px;
+  }
+  &__cubes {
+    position: absolute;
+    bottom: 83px;
+    right: 0;
+    width: 150px;
+    height: 180px;
+    background-color: $color-2;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 94px;
+      left: -70px;
+      width: 140px;
+      height: 150px;
+      background-color: $color-1;
+    }
+  }
+}

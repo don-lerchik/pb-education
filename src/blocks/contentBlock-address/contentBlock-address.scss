@@ -1,0 +1,20 @@
+.contentBlock-address {
+  &__title{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+  &__bold {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    padding-left: 4px;
+  }
+  &__row{
+    white-space: nowrap;
+    &--phone{
+      margin-bottom: 30px;
+    }
+  }
+}

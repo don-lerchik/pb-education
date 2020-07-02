@@ -1,0 +1,25 @@
+.contentBlock-feedbackForm {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__input {
+    margin-bottom: 20px;
+  }
+  &__checkbox {
+    margin-bottom: 20px;
+  }
+  &__btn {
+    margin: 0 auto;
+    width: 138px;
+    color: $color-4;
+    border: 1px solid $color-4;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  &__link:hover {
+    color: $color-1;
+  }
+}

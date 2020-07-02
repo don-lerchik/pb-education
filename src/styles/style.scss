@@ -1,0 +1,36 @@
+@import 'mixins';
+
+/* Global styles */
+@import 'global/global-variables';
+@import 'global/global-fonts';
+@import 'global/global-typo';
+@import 'global/global-scaffolding';
+
+/* Plugins */
+@import 'plugins/slick';
+
+/* Blocks */
+@import './src/blocks/icons/icons';
+@import './src/blocks/header/header';
+@import './src/blocks/banner/banner';
+@import './src/blocks/aboutUs/aboutUs';
+@import './src/blocks/advantages/advantages';
+@import './src/blocks/available-objects/available-objects';
+@import './src/blocks/video-objects/video-objects';
+@import './src/blocks/reviews/reviews';
+@import './src/blocks/contentBlock-address/contentBlock-address';
+@import './src/blocks/contentBlock-office/contentBlock-office';
+@import './src/blocks/feedback/feedback';
+@import './src/blocks/contentBlock-feedbackForm/contentBlock-feedbackForm';
+@import './src/blocks/footer/footer';
+@import './src/blocks/breadcrumbs/breadcrumbs';
+@import './src/blocks/discounts/discounts';
+@import './src/blocks/map/map';
+@import './src/blocks/choice/choice';
+@import './src/blocks/history/history';
+@import './src/blocks/premises/premises';
+@import './src/blocks/pagination/pagination';
+@import './src/blocks/office-info/office-info';
+@import './src/blocks/pbt-list/pbt-list';
+@import './src/blocks/pbt-listIcon/pbt-listIcon';
+@import './src/blocks/pbt-table/pbt-table';

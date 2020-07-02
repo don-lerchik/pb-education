@@ -1,0 +1,12 @@
+mixin advantages(modifier)
+  -var content = modifier || {}
+  -var advantage = content.items || ''
+  -var title = content.title || ''
+  section.advantages&attributes(attributes)
+    .container.advantages__container
+      h2.title.advantages__title= title
+      .advantages__block
+        each val in advantage
+          .advantages__item
+            +icon(val.icon,'advantages__icon')
+            .advantages__name= val.text

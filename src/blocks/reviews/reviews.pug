@@ -1,0 +1,13 @@
+mixin reviews(modifier)
+  -var content = modifier || {}
+  -var elems = content.elem || ''
+  -var title = content.title || ''
+  section.reviews&attributes(attributes)
+    .container.reviews__container
+      h2.title.reviews__title= title
+      .reviews__list
+        each val in elems
+          .reviews__item
+            .reviews__img(style='background-image: url("'+val.img + ' ") ')
+            .reviews__text= val.text
+      .btn.secondary-2.reviews__btnMore СМОТРЕТЬ ЕЩЕ

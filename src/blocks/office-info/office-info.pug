@@ -1,0 +1,39 @@
+mixin office-info(modifier)
+  -var content = modifier || {}
+  -var name = content.name || ''
+  -var general = content.general || ''
+  -var extra = content.extra || ''
+  -var location = content.location || ''
+  -var lists = content.lists || ''
+  -var imgList = content.imgList || ''
+  section.office-info&attributes(attributes)
+    .container.office-info__container
+      h2.title.office-info__title ПОМЕЩЕНИЕ
+        span= name
+      .office-info__infoBlock
+        h3.title.office-info__subtitle ХАРАКТЕРИСТИКИ ПОМЕЩЕНИЯ
+        .office-info__list
+          .office-info__item.office-info--general
+            +pbt-table(general)
+          .office-info__item.office-info__item--extra
+            +pbt-listIcon(extra)
+          .office-info__item.office-info__item--lacation
+            +pbt-table(location.address)
+            ul.office-info__metroList
+              each val in location.metro
+                li.office-info__metroItem
+                  +icon('metro','office-info__subwayIcon')(class= val.color)
+                  span.office-info__subwayName= val.name
+                  - if (val.type === '1') {
+                    +icon('drive-time','office-info__typeTime')
+                  -}
+                  - else {
+                      +icon('footsteps','office-info__typeTime')
+                  -}
+                  span.office-info__time= val.time
+          .office-info__item.office-info__item--options
+            each val in lists
+              +pbt-list(val)(class='office-info__options')
+      .office-info__sliderBlock
+        each val in imgList
+          .office-info__sliderElem(style='background-image: url("'+val + ' ") ')

@@ -1,0 +1,15 @@
+mixin video-objects(modifier)
+  -var content = modifier || {}
+  -var elems = content.elem || ''
+  -var title = content.title || ''
+  section.video-objects&attributes(attributes)
+    .container.video-objects__container
+      h2.title.video-objects__title= title
+      .video-objects__sliderBlock
+        each val in elems
+          .video-objects__sliderItem
+            .video-objects__sliderContent
+              h3.video-objects__sliderTitle= val.title
+              .video-objects__sliderText= val.text
+            .video-objects__sliderImg(style='background-image: url("'+val.video + ' ") ')
+      .btn.secondary.video-objects__btnNext Следующее видео

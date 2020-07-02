@@ -1,0 +1,17 @@
+mixin header(modifier)
+  -var content = modifier || {}
+  -var pageLink = content.contentPage || ''
+  header.header&attributes(attributes)
+    .header__container
+      nav.header__nav
+        .header__menu
+          span(class='header__menu-global header__menu-top')
+          span(class='header__menu-global header__menu-middle')
+          span(class='header__menu-global header__menu-bottom')
+        ul.header__listNav
+          each val in pageLink
+            +item-link({href: val.href , text: val.text, visible: 'true', active: val.active})(class="header__linkNav")
+        a.header__feedback(href='#')
+          +icon('phone','header__phone-icon')
+          span Заказать зонок
+    .overlay

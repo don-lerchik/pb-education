@@ -1,0 +1,40 @@
+mixin contentBlock-office(modifier)
+  -var content = modifier || {}
+  -var name = content.id || ''
+  -var square = content.square || ''
+  -var flor = content.flor || ''
+  -var classType = content.class || ''
+  -var price = content.price || ''
+  -var salePrice = content.salePrice || ''
+  -var img = content.img || ''
+  -var favorites = content.favorites || ''
+  -var description = content.description || ''
+  .contentBlock-office&attributes(attributes)(class= salePrice ? 'contentBlock-office--sale' : '')
+    a.contentBlock-office__wrap( href='./office.html')
+      .contentBlock-office__image(style='background-image: url("'+img + ' ") ')
+      .contentBlock-office__content
+        .contentBlock-office__body
+          .contentBlock-office__title Офис
+            span= name
+          .contentBlock-office__data
+            .contentBlock-office__dataItem
+              | Площадь
+              span= square
+              | м²
+            .contentBlock-office__dataItem Этаж
+              span= flor
+            .contentBlock-office__dataItem.contentBlock-office__dataItem--class Класс
+              span= classType
+        .contentBlock-office__footer
+          .contentBlock-office__price Ставка, ₽
+            span= price
+          -if (salePrice) {
+            span.contentBlock-office__priceSale= salePrice
+          -}
+          -if (description) {
+            .contentBlock-office__description= description
+          -}
+    -if (favorites) {
+      +link({ href: '#'})(class="contentBlock-office__favorites")(class=favorites === '1'? 'active': '')
+        +icon('star','contentBlock-office__icon-favorites')
+    -}

@@ -1,0 +1,26 @@
+.premises {
+  &__container{
+    padding: 0 16px;
+    padding-bottom: 34px;
+  }
+  &__title{
+    margin-bottom: 30px;
+  }
+  &__head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__pagination{
+    flex-grow: 1;
+  }
+  &__list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__item{
+    width: 550.34px;
+    margin-bottom: 16px;
+  }
+}

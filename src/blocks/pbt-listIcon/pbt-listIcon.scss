@@ -1,0 +1,20 @@
+.pbt-listIcon {
+  &__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 13px;
+  }
+  &__list {
+  }
+  &__listItem {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 13px;
+  }
+  &__icon{
+    margin-right: 10px;
+  }
+}

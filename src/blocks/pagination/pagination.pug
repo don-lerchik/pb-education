@@ -1,0 +1,28 @@
+mixin pagination(modifier)
+  .pagination&attributes(attributes)
+    .pagination__selector
+      span Показывать по 
+      .pagination__selector-choise 6
+        +icon('down','pagination__icon-down')
+      ul.pagination__selectorList(style='display:none')
+        +item-link({ href: "#",text: '6'})(class='pagination__selectorItem active')
+        +item-link({ href: "#",text: '12'})(class='pagination__selectorItem')
+        +item-link({ href: "#",text: '24'})(class='pagination__selectorItem')
+    .pagination__pagesInfo
+      span 1-6
+      span из
+      span 30
+    .pagination__pages
+      +link({href: '#'})(class='pagination__control')
+        +icon('prev','pagination__icon-prev')(class="disabled")
+      ul.pagination__pagesList
+        +item-link({href: '#', text: '1', active: true})(class='pagination__pagesItem')
+        +item-link({href: '#', text: '2'})(class='pagination__pagesItem')
+        +item-link({href: '#', text: '3'})(class='pagination__pagesItem')
+        +item-link({href: '#', text: '4'})(class='pagination__pagesItem')
+        +item-link({href: '#', text: '5'})(class='pagination__pagesItem')
+        +item-link({href: '#', text: '...'})(class='pagination__pagesItem')
+        +item-link({href: '#', text: '12'})(class='pagination__pagesItem')
+      +link({href: '#'})
+        +icon('next','pagination__icon-next')(class='pagination__control')
+    

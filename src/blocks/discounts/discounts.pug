@@ -1,0 +1,21 @@
+mixin discounts(modifier)
+  -var content = modifier || {}
+  -var elems = content.elem || ''
+  -var title = content.title || ''
+  section.discounts&attributes(attributes)
+    .container.discounts__container
+      h2.title.discounts__title= title
+      .discounts__list
+        each val in elems
+          .discounts__item
+            .discounts__date
+              | с
+              span= val.from
+              | по
+              span= val.to
+          .discounts__body
+            .discounts__img(style='background-image: url("'+val.img + ' ") ')
+            .discounts__textBlock
+              .discounts__name= val.title
+              .discounts__text= val.text
+              .discounts__note= val.note

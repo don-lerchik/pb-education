@@ -1,0 +1,14 @@
+mixin choice(modifier)
+  -var content = modifier || {}
+  -var title = content.title || ''
+  -var elems = content.elem || ''
+  section.choice&attributes(attributes)
+    .container.choice__container
+      h2.title.choice__title= title
+      .choice__list
+        each val, index in elems
+          .choice__item.choice__item--text
+            .choice__number= index+1
+              .choice__line
+            .choice__text= val.text
+          .choice__item.choice__item--img(style='background-image: url("'+val.img + ' ") ')

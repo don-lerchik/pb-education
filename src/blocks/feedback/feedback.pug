@@ -1,0 +1,27 @@
+mixin feedback(modifier)
+  -var content = modifier || {}
+  -var address = content.address || ''
+  -var img = content.img || ''
+  -var title = content.title || ''
+  section.feedback&attributes(attributes)
+    -if(title){
+        h2.title.feedback__title= title
+    -}
+    -if(img){
+      .feedback__fill
+        .container.feedback__containerFill
+          .feedback__wrapperFill
+            -if(img.imgLeft){
+              .feedback__img.feedback__img--left(style='background-image: url("'+img.imgLeft + ' ") ')
+            -}
+            +contentBlock-feedbackForm(class="feedback__formFill")
+            -if(img.imgRight){
+              .feedback__img.feedback__img--right(style='background-image: url("'+img.imgRight + ' ") ')
+            -}
+    -}
+    -else {
+      .container.feedback__container
+        .feedback__wrapper
+          +contentBlock-address(address)(class="feedback__address")
+          +contentBlock-feedbackForm(class="feedback__form")
+    -}

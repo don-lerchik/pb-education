@@ -1,0 +1,98 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 16px 0;
+  &__selector {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 28px;
+    &-choise {
+      padding: 0 4px;
+      cursor: pointer;
+      &.active {
+        .pagination__icon-down {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  &__selectorList {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: -24px;
+    background-color: $color-5;
+    padding: 12px 0px;
+  }
+  &__selectorItem {
+    padding: 6px 24px;
+    margin-bottom: 8px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    &.active {
+      background-color: $color-4;
+      color: $color-2;
+      position: relative;
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 12px;
+        right: 15px;
+        width: 8px;
+        height: 4px;
+        border-bottom: 1px solid $color-2;
+        border-left: 1px solid $color-2;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  &__pagesInfo {
+    font-size: 14px;
+    line-height: 20px;
+    color: $disable-color;
+    margin-right: 28px;
+    span {
+      padding: 0 2px;
+    }
+  }
+  &__pages {
+    display: flex;
+    align-items: center;
+  }
+  &__pagesList {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0 10px;
+  }
+  &__pagesItem{
+    padding: 0 4px;
+    & .active{
+      color: $color-2;
+    }
+  }
+  &__control{
+    display: flex;
+    align-items: center;
+  }
+  &__icon {
+    &-down {
+      transform: rotate(0deg);
+      transition: all 0.3s ease-in-out;
+    }
+    &-prev,
+    &-next{
+      &.disabled{
+        fill: $disable-color;
+      }
+    }
+  }
+}

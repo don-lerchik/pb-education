@@ -1,0 +1,20 @@
+mixin image(options)
+	-var options = options || {}
+	-var src = options.src || ''
+	-var width = options.width || ''
+	-var height = options.height || ''
+	-var alt = options.alt || ''
+	-var desk = options.desk || ''
+	-var laptop = options.laptop || ''
+	-var tablet = options.tablet || ''
+		picture
+			-if(desk) {
+				source(media='(min-width: 1440px)', srcset=desk)
+			-}
+			-if(laptop) {
+				source(media='(min-width: 1024px)', srcset=laptop)
+			-}
+			-if(tablet) {
+				source(media='(min-width: 768px)', srcset=tablet)
+			-}
+			img(src= src alt= alt width= width||false height= height||false)&attributes(attributes)
